@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: toures-balon-orden
+  profiles: prod
+  cloud:
+    config:
+      uri: http://192.168.0.6:8888

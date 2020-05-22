@@ -1,0 +1,30 @@
+server:
+  port: 0
+---
+spring:
+  profiles:
+    active:
+      - dev
+  sleuth:
+    sampler:
+    probability: 1.0
+  zipkin:
+    base-url: http://192.168.0.6:9411/
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/toures_domain_orden?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+  application:
+    name: toures-balon-orden
+eureka:
+  client:
+    #  service-url: {"http://toures-balon-discovery:8761/eureka"}
+    serviceUrl:
+      defaultZone: "http://192.168.0.6:8761/eureka"
+  instance:
+    prefer-ip-address: true
