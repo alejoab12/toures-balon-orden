@@ -12,9 +12,7 @@ import java.util.List;
 public class InformacionCliente {
     @Id
     private String id;
-    @Column(unique = true)
     private Integer tipoDocumento;
-    @Column(unique = true)
     private String documento;
     private Date fechaNacimiento;
     private String nombres;
