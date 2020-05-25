@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 public class Detalle {
     @Id
     private String id;
+    private String idProducto;
     private String tipoProveedor;
     private Double precio;
     private Double impuesto;

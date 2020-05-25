@@ -16,7 +16,7 @@ public class DetalleModelo {
     private Timestamp fechaFin;
     private String descripcion;
     private String idCliente;
-
+    private String idProducto;
     public DetalleModelo() {
     }
 
@@ -29,6 +29,7 @@ public class DetalleModelo {
         this.fechaFin = detalle.getFechaFin();
         this.descripcion = detalle.getDescripcion();
         this.idCliente=detalle.getClienteId().getId();
+        this.idProducto=detalle.getIdProducto();
     }
 
     public Detalle toEntity() {
@@ -40,6 +41,7 @@ public class DetalleModelo {
         detalle.setPrecio(this.precio);
         detalle.setTipoProveedor(this.tipoProveedor);
         detalle.setImpuesto(this.impuesto);
+        detalle.setIdProducto(this.idProducto);
         return detalle;
     }
     @JsonIgnore
