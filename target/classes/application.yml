@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 8758
 ---
 spring:
   profiles:
@@ -16,9 +16,9 @@ spring:
    #   ddl-auto: create-drop
 
   datasource:
-    url: jdbc:mysql://localhost:3306/toures_domain_orden?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password:
+    url: jdbc:mysql://192.168.0.6:3306/toures_domain_orden?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: gema
+    password: m22102013M..
 
   application:
     name: toures-balon-orden

@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: toures-balon-orden-deployment
+  labels:
+    app: toures-balon-oauth
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: toures-balon-orden
+  template:
+    metadata:
+      labels:
+        app: toures-balon-orden
+    spec:
+      containers:
+        - name: toures-balon-orden
+          image: alejoab12/toures-balon-orden
+          ports:
+            - containerPort: 8080
